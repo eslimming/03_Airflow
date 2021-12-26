@@ -5,6 +5,9 @@ python3 -m venv env
 2) Abrir venv:
 source env/bin/activate
 
+Instalar librerias (psycopg2) en venv (estamos dentro del venv): 
+pip install psycopg2-binary
+
 3) Instalar Airflow:
 pip install apache-airflow
 
