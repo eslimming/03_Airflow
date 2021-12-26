@@ -1,0 +1,33 @@
+1) Crear venv:
+python3 -m venv env
+
+
+2) Abrir venv:
+source env/bin/activate
+
+3) Instalar Airflow:
+pip install apache-airflow
+
+4) Crear carpete airflow dentro del proyecto y configurarla como airflow home:
+export AIRFLOW_HOME=/home/efsq/Apps/Python/03_Airflow/airflow
+
+5) Inicializar db (sqlite por defecto):
+airflow db init
+
+6) Crear Usuario:
+airflow users create --username efsq --firstname Eduardo --lastname Slimming --role Admin --email eslimming@hotmail.com
+
+7) Inicializar Webserver:
+airflow webserver
+(http://localhost:8080)
+
+8) Inicializar Scheduler:
+En otro terminal entramos al venv: source env/bin/activate
+Decirle a airflow el path: export AIRFLOW_HOME=/home/efsq/Apps/Python/03_Airflow/airflow
+Ejecutar scheduler: airflow scheduler
+
+9) Crear DAGs
+En la carpeta dags se crean los .py
+
+
+
