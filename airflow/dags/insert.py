@@ -4,7 +4,7 @@ from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 def insertar():  
     query = """ 
-    INSERT INTO public.airflow (dt) VALUES(NOW())
+    INSERT INTO public.airflow (dt) VALUES(NOW());
     """
     conexion1 = psycopg2.connect(host="localhost", database="postgres", user="postgres", password="dalealbo")
     cursor1=conexion1.cursor()
